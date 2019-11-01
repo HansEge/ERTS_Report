@@ -1,0 +1,17 @@
+%!TEX root = ../Main.tex
+
+\chapter{Introduction}
+This report describes a project for using HW/SW Co-design in designing and modeling a “Route Optimization using Genetic Search Algorithm” (ROGSAnne).
+The project is about defining a methodology and using it to describe a model of a system. After this some of the system will be designed for the software part, and an IP core will be modeled and tested using the Vivado tool chain.
+
+\section{The problem}
+The purpose of the system is to find an optimum route between a series of points, minimizing the total traveled distance. This problem is commonly known as the “Traveling Salesperson Problem” [ref: wiki?].
+
+The optimized route plan is intended to be used within a Drone Delivery System, in which a drone has to deliver an amount of packages (e.g. 100, it’s a very large drone) to different locations. It is imagined that the ROGSAnne-system would be implemented on the server-side of a system, allowing for a route plan to be calculated, provided the locations of the points to visit for a drone.
+
+The problem is that the number of possible candidate solutions raise exponentially (maybe do some calculations?) with the number of points to visit. Instead of calculating the traveled distance of each possible route, an optimization algorithm can be used to find the best route. In this case, the meta-heuristic optimization algorithm “Genetic Algorithm” is used.
+
+While using an optimization algorithm can speed up the process of finding the optimum route, it is still a computationally heavy task. Thus, it is of interest to speed up the process using hardware acceleration, allowing more drones to utilize the same server.
+
+As the production of each new candidate solution in a new “generation” is independent of each other, it is assumed that the process can be parallelized, greatly improving calculation speed.
+
