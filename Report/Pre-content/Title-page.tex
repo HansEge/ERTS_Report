@@ -1,0 +1,61 @@
+%!TEX root = ../Main.tex
+
+\begin{titlepage}
+	
+	\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+	\setlength{\topmargin}{0in}
+	\centering % Center everything on the page
+	
+	%----------------------------------------------------------------------------------------
+	%	HEADING SECTIONS
+	%----------------------------------------------------------------------------------------
+	\textsc{\LARGE \institution}\\[1.5cm] % Name of your university/college
+	\textsc{\Large \subject}\\[0.5cm] % Major heading such as course name
+	\textsc{\large \subsubject}\\[0.5cm] % Minor heading such as course title
+	
+	%----------------------------------------------------------------------------------------
+	%	TITLE SECTION
+	%----------------------------------------------------------------------------------------
+	
+	\HRule \\[0.4cm]
+	{ \huge \bfseries \title \smallskip}\\ % Title of your document
+	\HRule \\[1cm]
+	
+	%----------------------------------------------------------------------------------------
+	%	AUTHOR SECTION
+	%----------------------------------------------------------------------------------------
+	
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushleft} \large
+			\textbf{Gruppemedlemmer:}\\
+			\groupMembers [0.5cm]
+		\end{flushleft}
+	\end{minipage}
+	~
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushright} \large
+			\textbf{Studienumre:} \\
+			\memberIDs [0.5cm]
+		\end{flushright}
+	\end{minipage}
+	%\\[2cm]
+	
+	%\vspace*{\fill}
+	
+	%----------------------------------------------------------------------------------------
+	%	LOGO SECTION
+	%----------------------------------------------------------------------------------------
+	\begin{figure}[b]
+		\centering
+		\href{http://ase.au.dk/}{\includegraphics[scale=0.5]{Images/logo.jpg}}\\[0.5cm]
+		\large \date\\[0.5cm]
+		\copyright \sffamily  \ \ \the\year \ - All Rights Reserved
+	\end{figure}
+	
+	%----------------------------------------------------------------------------------------
+	%	DATE SECTION
+	%----------------------------------------------------------------------------------------
+	
+	% {\large \today}\\[0.5cm] % Date, change the \today to a set date if you want to be precise
+	
+\end{titlepage}

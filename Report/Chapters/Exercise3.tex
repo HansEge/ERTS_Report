@@ -1,0 +1,129 @@
+%!TEX root = ../Main.tex
+
+\chapter{Exercise 3}
+
+
+\textbf{Write a C-application that implements a command language interpreter, controlled via the
+	USB-UART interface. The following commands must be implemented:}
+	
+\textbf{• 1 - Sets the binary value from 0-15 on the red led’s by reading switch input (SW0-SW3)\\\\	
+• 2 - Counts binary the red led’s using a timer of 1 sec.}
+
+\section{Command 1}
+The essence of the first command is to set a binary value from 0-15 by using the four switches, which will be represented as a binary value by the four LED's on the board. 
+
+The code snippet below shows how we read input from the terminal, and execute the a command based on that input.
+\begin{lstlisting}
+//read input from the terminal in byte
+int userInput = inbyte();
+xil_printf("Received: %d\r\n", userInput);
+
+switch(userInput)
+{
+case (int)'1':
+xil_printf("Received command 1\r\n");
+execute_command_1();
+break;
+case (int)'2':
+xil_printf("Received command 2\r\n");
+execute_command_2();
+break;
+case (int)'3':
+xil_printf("Received command 3\r\n");
+execute_command_3();
+break;
+case (int)'4':
+xil_printf("Received command 4\r\n");
+execute_command_4();
+break;
+default:
+xil_printf("Received unknown command.");
+break;
+}
+\end{lstlisting}
+Below is a code snippet of the implemented first command. \\
+When the function \textbf{execute\_command\_1()} is called the switches on the board is read with the function \textbf{XGpio\_DiscreteRead(\&dip, 1)}. Where \&dip is the InstancePtr that points to the XGpio instance that is being worked on, and the '1' is the channel. 
+
+The \textbf{writeValueToLEDs(int val)} takes the value returned from the \textbf{XGpio\_DiscreteRead()} and writes the value to the LED registers. 
+\begin{lstlisting}
+void execute_command_1()
+{
+xil_printf("Executing command 1\r\n");
+while(1)
+{
+dip_check = XGpio_DiscreteRead(&dip, 1);
+
+writeValueToLEDs(dip_check);
+
+}
+}
+
+void writeValueToLEDs(int val)
+{
+LED_IP_mWriteReg(XPAR_LED_IP_S_AXI_BASEADDR, 0, val);
+}
+\end{lstlisting}
+
+Command 1 work as expected. 
+
+\section{Command 2}
+
+Command 2 should, as states in the problem description, count the binary red LED's using the timer of 1 sec. 
+
+First the timer needs to be initialized. Below is a code snippet of how the timer is implemented. Comments in the code explains the implementation.
+
+\begin{lstlisting}
+#define ONE_SECOND 325000000 // half of the CPU clock speed
+
+// PS Timer related definitions
+XScuTimer_Config *ConfigPtr;
+XScuTimer *TimerInstancePtr = &Timer;
+
+int main (void) 
+{
+//initialize timer
+ConfigPtr = XScuTimer_LookupConfig (XPAR_PS7_SCUTIMER_0_DEVICE_ID);
+s32 Status = XScuTimer_CfgInitialize (TimerInstancePtr, ConfigPtr, ConfigPtr->BaseAddr);
+if (Status != XST_SUCCESS){
+xil_printf("Timer init() failed\r\n");
+return XST_FAILURE;
+}
+
+// Load timer with delay in multiple of ONE_SECOND
+XScuTimer_LoadTimer(TimerInstancePtr, ONE_SECOND);
+// Set AutoLoad mode
+XScuTimer_EnableAutoReload(TimerInstancePtr);
+}
+
+\end{lstlisting}
+
+The function \textbf{execute\_command\_2()} sets op a counter and writes the value of counter to the LED's with the function \textbf{writeValueToLEDs(counter)} which was explained above. Then it starts the timer, and waits for the timer to expire, which will take one second. When the timer has expired the timer is cleared and the counter is incremented, before the loop starts again. Below is a code snippet of command 2. 
+
+\begin{lstlisting}
+void execute_command_2()
+{
+xil_printf("Executing command 2\r\n");
+int counter = 0;
+while(1)
+{
+xil_printf("Counter: %d\r\n", counter);
+writeValueToLEDs(counter);
+
+// Start the timer
+XScuTimer_Start(TimerInstancePtr);
+
+// Wait until timer expires
+while(!XScuTimer_IsExpired(TimerInstancePtr));
+
+// clear status bit
+XScuTimer_ClearInterruptStatus(TimerInstancePtr);
+
+counter++;
+
+// Timer auto-enables
+
+}
+\end{lstlisting}
+
+The function \textbf{execute\_command\_2()} works as expected. 
+

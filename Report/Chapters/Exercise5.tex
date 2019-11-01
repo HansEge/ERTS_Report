@@ -1,0 +1,90 @@
+%!TEX root = ../Main.tex
+
+\chapter{Exercise 5}
+The goal og this exercise is to integrate a IP core into the project. This IP core is capable of multiplying two matrices and output the result. First we have to add the core to the project. This is done by following the lab3b\_ EmbeddedSystem.pdf guide. 
+
+When the IP core has been added a method for it also needs to be implemented. This can be seen in the code below.
+
+\begin{lstlisting}
+void multiMatrixHard(vectorArray in1, vectorArray in2, vectorArray out)
+{
+	for (int row = 0 ; row < MSIZE; row++)
+	{
+		for (int col = 0 ; col < MSIZE; col++)
+		{
+			xil_printf("[%d,%d]\r\n", row, col);
+			
+			Xil_Out32(XPAR_MATRIX_IP_0_S00_AXI_BASEADDR + MATRIX_IP_S00_AXI_SLV_REG0_OFFSET, in1[row].vect);
+			Xil_Out32(XPAR_MATRIX_IP_0_S00_AXI_BASEADDR + MATRIX_IP_S00_AXI_SLV_REG1_OFFSET, in2[col].vect);
+			out[row].comp[col] = Xil_In32(XPAR_MATRIX_IP_0_S00_AXI_BASEADDR + MATRIX_IP_S00_AXI_SLV_REG2_OFFSET);
+			
+		}
+	}
+
+}
+\end{lstlisting}
+
+It can be seen that the code iterates the rows and columns of the matrices. This means that each element of the matrices are being multiplied and added. At line 11 it can be seen that the output of this is put into an output array, which is the result of the multiplication. 
+
+Lastly we will look into the execution time between the hardware and the software implementation. We do this by using the XScuTimer from before. It is initiated just before the multiMatrixSoft() method and when the program has finished the matrix calculations a new timestamp is extracted from the timer. These two numbers are subtracted from each other and this gives us the execution time for the method. The same approach has been made for the multiMatrixHard() method.
+
+
+\begin{lstlisting}
+xil_printf("Executing command 3\r\n");
+xil_printf("Matrix multiplication\r\n");
+setInputMatrices();
+
+xil_printf("A = \r\n");
+displayMatrix(aInst);
+
+xil_printf("bT = \r\n");
+displayMatrix(bTInst);
+
+// Multiply matrices in SW.
+xil_printf("Calculating P in SW\r\n");
+
+XScuTimer_Start(TimerInstancePtr); //Start timer
+multiMatrixSoft(aInst, bTInst,pInst);
+
+int time_SW_post = XScuTimer_GetCounterValue(TimerInstancePtr); // Get elapsed time in clock cycles
+int time_elapsed_SW = ONE_SECOND - time_SW_post;	// Calculate elapsed time
+
+xil_printf("P = \r\n");
+displayMatrix(pInst);
+
+
+
+// Multiply matrices in HW.
+int time_HW_post;
+setInputMatrices(); // Make sure that matrices are "reset".
+xil_printf("Calculating P in HW\r\n");
+
+XScuTimer_RestartTimer(TimerInstancePtr); 	// Start the timer
+multiMatrixHard(aInst, bTInst, pInst);
+time_HW_post = XScuTimer_GetCounterValue(TimerInstancePtr); // Get elapsed time in clock cycles
+int time_elapsed_HW = ONE_SECOND - time_HW_post; // Calculate elapsed time
+
+xil_printf("P = \r\n");
+displayMatrix(pInst);
+
+
+//Display elapsed time of matrix multiplications
+xil_printf("\r\n");
+xil_printf("Multiplication times (clock cycles):\r\n");
+xil_printf("SW: %d\r\n",time_elapsed_SW);
+xil_printf("HW: %d\r\n",time_elapsed_HW);
+
+\end{lstlisting}
+
+The two variables \textbf{time\_elapsed\_SW} and \textbf{time\_elapsed\_HW} hold the amount of clock cycles used for the two different calculation methods. This can be recalculated into seconds by using the below equation:
+
+\[ TimeElapsedInSecs = \dfrac{ClockCyclesUsed}{FreqOfProcessor} \]
+
+The result of this gives us
+\begin{itemize}
+	\item Hardware = 9.7224ms
+	
+	\item Software = 9.7219ms
+\end{itemize}
+
+The hardware solution should in theory be faster, but because of the frequency of the CPU is faster than the FPGA the software solution is still the fastest.
