@@ -11,32 +11,17 @@ The following chapter will describe the groups methodology and show multiple dia
 	\item \textbf{Class Diagram:} To describe the logical partitions of the implemented software, and their dependencies and associations.
 	
 	\item \textbf{Activity Diagram:} To provide an overview of the overall system flow.
+	
+	\item \textbf{Accept test:} To provide an overview of the validation of the system.
 \end{itemize}
 
-The block definition diagram show the overall context of the system and what the it consists of. 
+There will be three different phases throughout the development of the ROGSAnne system. Inspiration for this methodology comes from this paper \cite{A_HW_SW_CodesignMethodology} The first will be \textbf{System Analysis}. The goal of this phase is to make it clear what is to be made. It covers analysis of the system domain including interaction with the environment and required functionality.
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{Images/BDD.png}
-	\caption{Block definition diagram of ROGSAnne}
-	\label{fig:BDD}
-\end{figure}
+The first step of System Analysis is to identify external users interacting with the system. This is done with use cases. These external actors could be sensors, actuators or users. The second step would be to identify use cases for these external actors and describe the use case scenario. 
+To further analyse the system domain a class diagram should be made based on the findings in the use cases.
 
-The system consists of three function blocks. These blocks encapsulates some sort of functionality.
+The next phase will be the \textbf{System Design} phase. The goal of this phase will focus on how to make the architecture for the system, by developing BDD and IBDs of the system. When these diagrams have been made an activity diagram will be made to illustrate the flow of control of the system.
 
-\begin{itemize}
-	\item \textbf{User Interface} handles the interface between user and system. This is done through a console.
-	\item \textbf{Setup} handles the initial creation of a population for the genetic algorithm. 
-	\item \textbf{GeneticAlgo} will handle the optimization of the route with a genetic search algorithm.
-\end{itemize}
-
-An internat block diagram is made based on the BDD below. 
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{Images/IBD_ROGSAnne.png}
-	\caption{Internal block definition diagram of ROGSAnne}
-	\label{fig:IBD}
-\end{figure}
+The last phase is \textbf{System implementation and validation}. The goal of this phase is to focus on making and verifying the system. Because this phase only focuses on the implementation and validation of the system, there's no need for more diagrams. An accept test could be made when validating the system to see if it satisfies the requirements and a table is  most likely the best way to showcase these results.
 
 
