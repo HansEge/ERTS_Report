@@ -34,6 +34,8 @@ As the number of possible solutions is equal to the factorial of the number of p
 \section{Genetic Algorithm}
 The genetic algorithm is a meta-heuristic algorithm inspired by the idea of "survival of the fittest". The basic idea is to create a "generation" of sample solutions, by encoding the data of solutions as "chromosomes". New generations of sample solutions are then created by combining these candidate solutions, with the more "fit" samples being more likely to be chosen for "reproduction". The idea is that attributes that result in good fitness will remain, while attributes resulting in bad fitness will be sorted out. Furthermore, each sample has a chance to randomly mutate, which reflects the random mutations happening in nature as well.
 
+For each generation the best solution is found and is compared to the \textit{global} best solution, i.e. the best solution encountered so far over all generations. If the best solution for the generation is better than the global best solution, the global best solution is replaced.
+
 \subsection{Objective function}
 In order to evaluate fitness of a sample, an objective function must be implemented. In our case, the objective function is the total route distance, given a certain route of points.
 
@@ -102,3 +104,14 @@ For example:
 	\caption{Example of mutation with information encoded as letters}
 	\label{fig:mutation_letters}
 \end{figure}
+
+\subsection{Stopping criterion}
+The algorithm must contain a stopping criterion, which is the criterion that must be fulfilled before the algorithm stops searching for a better solution. Possible stopping criterions are:
+
+\begin{itemize}
+	\item Certain number of generations run.
+	\item Certain number of generations without improvement in global best solution.
+	\item Global best solution evaluates to more/less than certain value.
+\end{itemize}
+
+In our case, the stopping criterion will be a certain number of generations without improvement in global best solution.
