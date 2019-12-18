@@ -2,3 +2,37 @@
 
 \chapter{Requirements}
 
+The following section will list the requirements the system has to meet. These requirements will be used as basis for the system architecture. The functional requirements will be listed and to define the interaction between the system and the user use cases is used. Non-functional requirements will also be listed in this section. 
+
+\section{Fuctional requirements}
+\begin{itemize}
+	\item \textbf{[Func Req 1]} The system must be able to calculate an optimized route
+	\item \textbf{[Func Req 2]} The system must be able to display the optimized route for the user
+\end{itemize}
+
+\begin{table}[H]
+	\begin{tabular}{|l|l|}
+		\hline
+		\cellcolor[HTML]{EFEFEF} \textbf{Use case}  & \cellcolor[HTML]{EFEFEF} \textbf{Optimize route}\\ \hline
+		\cellcolor[HTML]{EFEFEF} \textbf{User} &  Drone delivery Operator (DDO) \\ \hline
+		\cellcolor[HTML]{EFEFEF} \textbf{End Objective} &  Get most optimized route\\ \hline
+		\cellcolor[HTML]{EFEFEF} \textbf{Trigger} & All delivery coordinates have been uploaded to the optimization server \\ \hline 
+		\cellcolor[HTML]{EFEFEF} \textbf{Pre-condition} & Drone is fully charged and in functional condition \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\begin{tabular}{|l|l|l|}
+		\hline
+		\cellcolor[HTML]{EFEFEF} \textbf{Step}  & \cellcolor[HTML]{EFEFEF} \textbf{User Actions}   & \cellcolor[HTML]{EFEFEF} \textbf{System Actions} \\ \hline
+		\cellcolor[HTML]{EFEFEF} Start optimization  &  DDO presses “OPTIMIZE”   &  \makecell{ System performs \\ optimization on coordinates.} \\ \hline
+		\cellcolor[HTML]{EFEFEF} The drone route is updated   &     &  The system presents the optimized drone route for the DDO.  \\ \hline
+	\end{tabular}
+\end{table}
+
+
+\section{Non-fuctional requirements}
+\begin{itemize}
+	\item \textbf{[non-func Req 1]} Bla bla
+	\item \textbf{[non-func Req 2]} bla bla
+\end{itemize}
