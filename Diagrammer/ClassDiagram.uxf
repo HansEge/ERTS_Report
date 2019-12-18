@@ -177,7 +177,7 @@ Setup
     <panel_attributes>&lt;&lt;Class&gt;&gt;
 Chromosome
 -
-chromosome : binary
+chromosome : String
 -
 
 </panel_attributes>
