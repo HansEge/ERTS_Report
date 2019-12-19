@@ -54,18 +54,7 @@ SetupDone</panel_attributes>
       <w>150</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>ObjectiveFunc</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLState</id>
-    <coordinates>
-      <x>640</x>
-      <y>450</y>
-      <w>150</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>Fitness</panel_attributes>
+    <panel_attributes>GenerationReady</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -73,35 +62,12 @@ SetupDone</panel_attributes>
     <coordinates>
       <x>450</x>
       <y>450</y>
-      <w>210</w>
-      <h>40</h>
+      <w>290</w>
+      <h>150</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-CostCalculated</panel_attributes>
-    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>710</x>
-      <y>480</y>
-      <w>100</w>
-      <h>120</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-SetupDone</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLState</id>
-    <coordinates>
-      <x>640</x>
-      <y>580</y>
-      <w>150</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>Evaluator</panel_attributes>
-    <additional_attributes/>
+FitnessCalculated</panel_attributes>
+    <additional_attributes>10.0;20.0;270.0;20.0;270.0;130.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -135,7 +101,7 @@ StopConditionNotMet</panel_attributes>
       <w>160</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>BabyMaker</panel_attributes>
+    <panel_attributes>GenerationMaker</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -143,11 +109,11 @@ StopConditionNotMet</panel_attributes>
     <coordinates>
       <x>380</x>
       <y>480</y>
-      <w>130</w>
+      <w>170</w>
       <h>120</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-NewGeneration</panel_attributes>
+NewGenerationReady</panel_attributes>
     <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
   </element>
   <element>
@@ -170,6 +136,17 @@ NewGeneration</panel_attributes>
       <h>440</h>
     </coordinates>
     <panel_attributes>*STM ROCSAnne*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>640</x>
+      <y>580</y>
+      <w>150</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Evaluator</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
