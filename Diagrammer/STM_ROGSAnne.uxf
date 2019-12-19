@@ -4,9 +4,9 @@
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>820</x>
-      <y>120</y>
-      <w>90</w>
+      <x>310</x>
+      <y>350</y>
+      <w>150</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>Setup</panel_attributes>
@@ -15,8 +15,8 @@
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>860</x>
-      <y>50</y>
+      <x>380</x>
+      <y>280</y>
       <w>20</w>
       <h>20</h>
     </coordinates>
@@ -26,8 +26,8 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>860</x>
-      <y>60</y>
+      <x>380</x>
+      <y>290</y>
       <w>30</w>
       <h>80</h>
     </coordinates>
@@ -35,113 +35,126 @@
     <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
   </element>
   <element>
-    <id>UMLState</id>
-    <coordinates>
-      <x>780</x>
-      <y>220</y>
-      <w>180</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>Generate Initial Population</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <id>Relation</id>
     <coordinates>
-      <x>860</x>
-      <y>150</y>
-      <w>120</w>
+      <x>380</x>
+      <y>380</y>
+      <w>100</w>
       <h>90</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-SETUP_DONE</panel_attributes>
+SetupDone</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>790</x>
-      <y>320</y>
+      <x>310</x>
+      <y>450</y>
       <w>150</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>Evaluate Generation</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>860</x>
-      <y>250</y>
-      <w>250</w>
-      <h>90</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-INITIAL_PUPOLATION_CREATED</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLState</id>
-    <coordinates>
-      <x>480</x>
-      <y>430</y>
-      <w>170</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>Create New Generation</panel_attributes>
+    <panel_attributes>ObjectiveFunc</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1080</x>
-      <y>430</y>
-      <w>90</w>
+      <x>640</x>
+      <y>450</y>
+      <w>150</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>Save Solution</panel_attributes>
+    <panel_attributes>Fitness</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>880</x>
-      <y>430</y>
-      <w>220</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-[Stopping criterion met]</panel_attributes>
-    <additional_attributes>10.0;20.0;200.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLSpecialState</id>
-    <coordinates>
-      <x>850</x>
-      <y>430</y>
-      <w>40</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>type=decision</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>860</x>
-      <y>350</y>
+      <x>450</x>
+      <y>450</y>
       <w>210</w>
-      <h>100</h>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-GENERATED_EVALUATION</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+CostCalculated</panel_attributes>
+    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>710</x>
+      <y>480</y>
+      <w>100</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+SetupDone</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>640</x>
+      <y>580</y>
+      <w>150</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Evaluator</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>780</x>
+      <y>580</y>
+      <w>250</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+StopConditionMet</panel_attributes>
+    <additional_attributes>10.0;20.0;230.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>460</x>
+      <y>580</y>
+      <w>200</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+StopConditionNotMet</panel_attributes>
+    <additional_attributes>180.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>310</x>
+      <y>580</y>
+      <w>160</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>BabyMaker</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>480</y>
+      <w>130</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+NewGeneration</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>1240</x>
-      <y>440</y>
+      <x>1010</x>
+      <y>590</y>
       <w>20</w>
       <h>20</h>
     </coordinates>
@@ -149,38 +162,14 @@ GENERATED_EVALUATION</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
-    <id>Relation</id>
+    <id>UMLFrame</id>
     <coordinates>
-      <x>1160</x>
-      <y>440</y>
-      <w>100</w>
-      <h>30</h>
+      <x>210</x>
+      <y>230</y>
+      <w>870</w>
+      <h>440</h>
     </coordinates>
-    <panel_attributes>lt=-&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;80.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>640</x>
-      <y>430</y>
-      <w>230</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-[Stopping criterion not met]</panel_attributes>
-    <additional_attributes>210.0;20.0;10.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>550</x>
-      <y>330</y>
-      <w>260</w>
-      <h>120</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-GENERATION_CREATED</panel_attributes>
-    <additional_attributes>10.0;100.0;10.0;10.0;240.0;10.0</additional_attributes>
+    <panel_attributes>*STM ROCSAnne*</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>

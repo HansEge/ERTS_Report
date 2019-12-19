@@ -139,7 +139,7 @@ Generator</panel_attributes>
       <h>60</h>
     </coordinates>
     <panel_attributes>
-:Evaluator</panel_attributes>
+:Baby</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -151,7 +151,7 @@ Generator</panel_attributes>
       <h>60</h>
     </coordinates>
     <panel_attributes>
-:BabyMaker</panel_attributes>
+:Evaluator</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -223,24 +223,24 @@ Generator</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>670</x>
+      <x>1110</x>
       <y>450</y>
       <w>80</w>
       <h>30</h>
     </coordinates>
-    <panel_attributes>lt=[&lt;]-[&lt;]</panel_attributes>
-    <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
+    <panel_attributes>lt=[&gt;]-[&gt;]</panel_attributes>
+    <additional_attributes>10.0;10.0;60.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>420</x>
       <y>280</y>
-      <w>280</w>
+      <w>810</w>
       <h>200</h>
     </coordinates>
-    <panel_attributes>lt=[&lt;]-[&lt;]</panel_attributes>
-    <additional_attributes>260.0;180.0;180.0;180.0;180.0;10.0;10.0;10.0</additional_attributes>
+    <panel_attributes>lt=[&gt;]-[&lt;]</panel_attributes>
+    <additional_attributes>750.0;180.0;790.0;180.0;790.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLFrame</id>
