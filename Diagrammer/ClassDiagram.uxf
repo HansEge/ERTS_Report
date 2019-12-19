@@ -4,10 +4,27 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>357</x>
-      <y>700</y>
-      <w>196</w>
-      <h>140</h>
+      <x>585</x>
+      <y>594</y>
+      <w>252</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Class&gt;&gt;
+Fitness
+-
+
+-
++ ComputeFitness(Population p): void
++ SortPopulation(Population p) : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>783</x>
+      <y>864</y>
+      <w>252</w>
+      <h>180</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Class&gt;&gt;
 Population
@@ -27,10 +44,10 @@ Population
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>203</x>
-      <y>490</y>
-      <w>182</w>
-      <h>91</h>
+      <x>333</x>
+      <y>594</y>
+      <w>207</w>
+      <h>117</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Class&gt;&gt;
 GenerationReady
@@ -46,10 +63,10 @@ GenerationReady
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>707</x>
-      <y>490</y>
-      <w>196</w>
-      <h>91</h>
+      <x>1233</x>
+      <y>594</y>
+      <w>252</w>
+      <h>117</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Class&gt;&gt;
 Evaluator
@@ -63,10 +80,10 @@ Evaluator
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>448</x>
-      <y>490</y>
-      <w>217</w>
-      <h>91</h>
+      <x>900</x>
+      <y>594</y>
+      <w>279</w>
+      <h>117</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Class&gt;&gt;
 GenerationMaker
@@ -82,10 +99,10 @@ GenerationMaker
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>7</x>
-      <y>490</y>
-      <w>140</w>
-      <h>91</h>
+      <x>99</x>
+      <y>594</y>
+      <w>180</w>
+      <h>117</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Class&gt;&gt;
 Setup
@@ -100,10 +117,10 @@ Setup
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>56</x>
-      <y>574</y>
-      <w>315</w>
-      <h>189</h>
+      <x>162</x>
+      <y>702</y>
+      <w>639</w>
+      <h>243</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>430.0;250.0;10.0;250.0;10.0;10.0</additional_attributes>
@@ -111,10 +128,10 @@ Setup
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>287</x>
-      <y>574</y>
-      <w>175</w>
-      <h>140</h>
+      <x>405</x>
+      <y>702</y>
+      <w>513</w>
+      <h>180</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>230.0;180.0;230.0;90.0;10.0;90.0;10.0;10.0</additional_attributes>
@@ -122,10 +139,21 @@ Setup
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>525</x>
-      <y>574</y>
-      <w>294</w>
-      <h>77</h>
+      <x>702</x>
+      <y>702</y>
+      <w>27</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>999</x>
+      <y>702</y>
+      <w>378</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>10.0;90.0;400.0;90.0;400.0;10.0</additional_attributes>
@@ -133,10 +161,10 @@ Setup
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>399</x>
-      <y>574</y>
-      <w>175</w>
-      <h>77</h>
+      <x>837</x>
+      <y>702</y>
+      <w>225</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>10.0;90.0;230.0;90.0;230.0;10.0</additional_attributes>
@@ -144,10 +172,10 @@ Setup
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>609</x>
-      <y>700</y>
-      <w>112</w>
-      <h>91</h>
+      <x>1107</x>
+      <y>864</y>
+      <w>144</w>
+      <h>117</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Class&gt;&gt;
 Chromosome
@@ -161,10 +189,10 @@ chromosome : String
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>546</x>
-      <y>735</y>
-      <w>77</w>
-      <h>21</h>
+      <x>1026</x>
+      <y>909</y>
+      <w>99</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
@@ -172,10 +200,10 @@ chromosome : String
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>987</x>
-      <y>490</y>
-      <w>196</w>
-      <h>91</h>
+      <x>1593</x>
+      <y>594</y>
+      <w>252</w>
+      <h>117</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Class&gt;&gt;
 UserInterface
@@ -188,10 +216,10 @@ UserInterface
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>896</x>
-      <y>525</y>
-      <w>105</w>
-      <h>21</h>
+      <x>1476</x>
+      <y>639</y>
+      <w>135</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>130.0;10.0;10.0;10.0</additional_attributes>
@@ -199,10 +227,10 @@ UserInterface
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>315</x>
-      <y>56</y>
-      <w>245</w>
-      <h>147</h>
+      <x>558</x>
+      <y>18</y>
+      <w>324</w>
+      <h>225</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Class&gt;&gt;
 SystemContext
@@ -226,10 +254,10 @@ SystemContext
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>63</x>
-      <y>385</y>
-      <w>385</w>
-      <h>119</h>
+      <x>171</x>
+      <y>459</y>
+      <w>558</w>
+      <h>153</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
     <additional_attributes>530.0;10.0;530.0;70.0;10.0;70.0;10.0;150.0</additional_attributes>
@@ -237,10 +265,10 @@ SystemContext
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>427</x>
-      <y>427</y>
-      <w>385</w>
-      <h>77</h>
+      <x>702</x>
+      <y>513</y>
+      <w>666</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;530.0;10.0;530.0;90.0</additional_attributes>
@@ -248,10 +276,10 @@ SystemContext
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>553</x>
-      <y>427</y>
-      <w>21</w>
-      <h>77</h>
+      <x>1035</x>
+      <y>513</y>
+      <w>27</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
@@ -259,10 +287,21 @@ SystemContext
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>287</x>
-      <y>427</y>
-      <w>21</w>
-      <h>77</h>
+      <x>702</x>
+      <y>513</y>
+      <w>27</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>414</x>
+      <y>513</y>
+      <w>27</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
@@ -270,10 +309,10 @@ SystemContext
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>329</x>
-      <y>238</y>
-      <w>217</w>
-      <h>154</h>
+      <x>576</x>
+      <y>315</y>
+      <w>279</w>
+      <h>153</h>
     </coordinates>
     <panel_attributes>/&lt;&lt;AbstractClass&gt;&gt;/
 StateBase
@@ -298,10 +337,10 @@ StateBase
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>427</x>
-      <y>196</y>
-      <w>21</w>
-      <h>56</h>
+      <x>702</x>
+      <y>234</y>
+      <w>27</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
