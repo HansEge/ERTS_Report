@@ -25,5 +25,31 @@ The four states functionality is described under the design chapter and can be s
 \end{itemize}
 
 
+\subsection{Timer}
+One of the requirements for this assignment was to implement and test a part of the systems functionality on the ZYBO-board. So, different functionalities of the system were timed to examine what functionality of the system is most time consuming. To time the different functionalities a TimerClass was implemented. The class diagram for the TimerClass can be seen on \cref{fig:TimerClass_CD}. The library \textbf{XScuTimer.h} were used. 
+\begin{figure}[H]
+	\centering
+	{\includegraphics[width=\textwidth/2]{Images/TimerClass_CD.PNG}}\\[0.5cm]
+	\caption{Class diagram for the TimerClass.}
+	\label{fig:TimerClass_CD}
+\end{figure}
+
+The idea was to measure the most time consuming functionality in the system and hardware accelerate that functionality on the ZYBO-board and test the improvement. Three functionalities were time; the calculation of distance for each population, the calculation of fitness for each population and the generation of a new generation. Each of the functionalities were timed five times and the were mean calculated. On \cref{fig:timing_barGraph} a bar-graph of the timing results are presented. 
+
+\begin{figure}[H]
+	\centering
+	{\includegraphics[width=\textwidth]{Images/timing_barGraph.png}}\\[0.5cm]
+	\caption{Timing of functionalities bar-graph}
+	\label{fig:timing_barGraph}
+\end{figure}
+
+Its clear that the calculation of distances is the most time consuming functionality. So, this functionality will be hardware accelerated on the ZYBO-board.
+
+
+
+
+
+
+
 
 \section{SystemC}
