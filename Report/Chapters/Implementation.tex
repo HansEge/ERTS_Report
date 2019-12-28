@@ -46,5 +46,15 @@ The idea was to measure the most time consuming functionality in the system and 
 Its clear that the calculation of distances is the most time consuming functionality. So, this functionality will be hardware accelerated on the ZYBO-board.
 
 
+\section{Test of system}
+10 predetermined coordinates has been hardcoded into the program. The setup class makes an initial population each with these 10 coordinates in a random order. The population is evaluated and a new population is made based on the best performing of the population. Whenever a new better solution(population) is found, this is saved as the best so far. If no better solution is found after 19 iteration, the program stops and the best solution has been found. An example of this can be seen below on \cref{fig:algo_test_sw}.
+
+\begin{figure}[H]
+	\centering
+	{\includegraphics[width=\textwidth/2]{Images/algo_test_sw.png}}\\[0.5cm]
+	\caption{Test of genetic algorithm}
+	\label{fig:algo_test_sw}
+\end{figure}
+
 \section{SystemC}
 
