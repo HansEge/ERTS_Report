@@ -20,5 +20,9 @@ Figure \ref{fig:STM_diagram} shows the state machine diagram for system. It can 
 	\label{fig:STM_diagram}
 \end{figure}
 
+\subsection{Double buffering}
+The implemented algorithm operates with two buffers, one for the new generation and one for the old generation. This means when a new generation is generated the memory is allocated for the new generation beforehand. The memory for the new generation could also have been allocated dynamically which would require less memory. But, by allocating the memory beforehand makes it possible to parallelize the process of generating a new generation in the future.\\   
+State pattern is the only software design pattern used in this system. 
+
 \subsection{Command Pattern}
 The command pattern will be utilized in the creation of new generations. This is done to add the possibility of parallellizing the process of creating samples in the new generation. By creating a command queue and letting different instances of the class that creates samples \textit{(creators)} execute the commands, it is possible to "order" the creation of a certain amount of new samples, and then let the execution be up to the scheduler. This way, design space exploration can be carried out, with evaluation of execution speed versus resources used.
