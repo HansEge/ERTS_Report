@@ -1,8 +1,15 @@
 %!TEX root = ../Main.tex
 
 \chapter{Conclusion}
-In this project the group has examined different approaches to accelerate computational heavy software tasks. First a genetic search algorithm has been developed to run on the ZYBO board. When the system was fully operational the different tasks in the system was timed to see which was the most computational heavy. This was the calculation of distance between the different coordinates and thus this was picked to be hardware accelerated. 
+In this project the group has examined different approaches to accelerate computational heavy software tasks. First a genetic search algorithm has been developed to run on the ZYBO board. When the system was fully operational the different tasks in the system was timed to see which was the most computationally heavy. This was found to be the calculation of distance between the points and thus this was picked to be hardware accelerated. 
 
-The IP core has been coded and validated using systemC and synthesized in Vivado HLS. Directives has been used to optimize the latency. The UNROLL directive was used to greatly reduce the latency.
+A distance-calculator hardware block was synthesized using Vivado HLS, with a SystemC-module as the source. The functionality of the module was verified with C/RTL co-simulation, and the estimated performance improvement was noted.
 
-The end result is an optimized IP core that computes the distance in a fraction of the time compared to the software implementation.
+Using the "unroll"-directive to perform loop unrolling in the distance-calculator increased the performance further, and through experiment, it was found that an unroll factor of 3 was optimal for the current implementation, in terms of processing speed.
+
+The overall execution time of the system benefits significantly from the hardware acceleration, increasing the number of iterations of the algorithm from approximately 1900 pr. sec to about 6200 pr. sec, which is an increase of more than 200\%.
+
+It is seen that with the hardware-acceleration of the calculation of distances, the majority of the clock cycles are spent on creating a new generation. Thus, a future iteration could include a hardware-acceleration of this task, which would likely result in even faster execution speed.
+%The IP core has been coded and validated using systemC and synthesized in Vivado HLS. Directives has been used to optimize the latency. The UNROLL directive was used to greatly reduce the latency.
+
+%The end result is an optimized IP core that computes the distance in a fraction of the time compared to the software implementation.
