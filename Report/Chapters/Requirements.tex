@@ -6,7 +6,7 @@ The following section will list the requirements the system has to meet. These r
 
 \section{Functional requirements}
 \begin{itemize}
-	\item \textbf{[Func Req 1]} The system must be able to calculate an optimized route
+	\item \textbf{[Func Req 1]} The system must be able to calculate an optimized route, by means of the genetic search algorithm.
 	\item \textbf{[Func Req 2]} The system must be able to display the optimized route for the user
 \end{itemize}
 
@@ -14,10 +14,9 @@ The following section will list the requirements the system has to meet. These r
 	\begin{tabular}{|l|l|}
 		\hline
 		\cellcolor[HTML]{EFEFEF} \textbf{Use case}  & \cellcolor[HTML]{EFEFEF} \textbf{Optimize route}\\ \hline
-		\cellcolor[HTML]{EFEFEF} \textbf{User} &  Drone Delivery Operator (DDO) \\ \hline
-		\cellcolor[HTML]{EFEFEF} \textbf{End Objective} &  Get most optimized route\\ \hline
-		\cellcolor[HTML]{EFEFEF} \textbf{Trigger} & All delivery coordinates have been uploaded to the optimization server \\ \hline 
-		\cellcolor[HTML]{EFEFEF} \textbf{Pre-condition} & Drone is fully charged and in functional condition \\ \hline
+		\cellcolor[HTML]{EFEFEF} \textbf{User} &  Drone \\ \hline
+		\cellcolor[HTML]{EFEFEF} \textbf{End Objective} &  Get optimized route\\ \hline
+		\cellcolor[HTML]{EFEFEF} \textbf{Trigger} & All delivery coordinates have been uploaded to the optimization server \\ \hline
 	\end{tabular}
 \end{table}
 
@@ -30,7 +29,7 @@ The following section will list the requirements the system has to meet. These r
 	\begin{tabular}{|p{2cm}|p{5cm}|p{5cm}|}
 		\hline
 		\cellcolor[HTML]{EFEFEF} \textbf{Step} & \cellcolor[HTML]{EFEFEF} \textbf{User Actions}  & \cellcolor[HTML]{EFEFEF} \textbf{System Actions} \\ \hline
-		\cellcolor[HTML]{EFEFEF} Start optimization &  DDO presses “OPTIMIZE”  & System performs optimization on coordinates. \\ \hline
+		\cellcolor[HTML]{EFEFEF} Start optimization &   & System performs optimization on coordinates. \\ \hline
 		\cellcolor[HTML]{EFEFEF} The drone route is updated   &     &  The system presents the optimized drone route for the DDO.  \\ \hline
 		
 	\end{tabular}
@@ -40,8 +39,7 @@ The following section will list the requirements the system has to meet. These r
 
 \section{Non-functional requirements}
 \begin{itemize}
-	\item \textbf{[non-func Req 1]} The algorithm must be stopped after one of the two stopping 
-	criteria is met. 
+	\item \textbf{[non-func Req 1]} The algorithm must be stopped after not having found an improved solution in 19 iterations.
 	\item \textbf{[non-func Req 2]} The coordinates of a locations the drone has to visit must be in 2 dimensions.  
-	\item \textbf{[non-func Req 3]} The maximum number for locations the drone can visit on a single route is ten.
+	\item \textbf{[non-func Req 3]} The maximum number for locations the drone can visit on a single route is 10.
 \end{itemize}

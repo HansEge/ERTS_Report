@@ -6,7 +6,7 @@ This section will describe the theory behind the problem worked with in this pro
 \section{Traveling Salesman Problem}
 The problem is basically a well-known optimization problem called the Traveling Salesman Problem\cite{wiki:TSP}. The problem consists of creating the shortest route between a set of points, with all points being visited exactly once. 
 
-Given points with 2 coordinates, and assuming "as-the-crow-flies"-movement, the distance between two points is merely calculated as the euclidean distance between the points. For two points A and B, the distance is calculated as follows:
+Given points with 2 coordinates, and assuming "as-the-crow-flies"-movement, the distance between two points is calculated as the euclidean distance between the points. For two points A and B, the distance is calculated as follows:
 
 \begin{equation}
 	dist(A,B) = \sqrt{(x_B - x_A)^2 + (y_B - y_A)^2}
@@ -29,7 +29,7 @@ The problem is that the number of possible solutions increases with the number o
 \end{equation}
 
 \label{eq:number_of_possible_solutions}
-As the number of possible solutions is equal to the factorial of the number of points, this number quickly increases with an increasing number of points. Thus, optimizing the route by means of brute (i.e. trying out every single solution) force quickly becomes very computationally heavy. In order to avoid optimizing by brute force, global optimization functions can be used in order to find the optimal solution. We have chosen to use the genetic algorithm, as it is easy to implement when doing discrete optimization, which this problem is. Discrete optimization means that there is a finite set of possible solutions, instead of a continuous range of solutions.
+As the number of possible solutions is equal to the factorial of the number of points, this number quickly increases with an increasing number of points. Thus, optimizing the route by means of brute force (i.e. trying out every single solution) quickly becomes very computationally heavy. In order to avoid optimizing by brute force, global optimization functions can be used in order to find the optimal solution. We have chosen to use the genetic algorithm, as it is easy to implement when doing discrete optimization, which this problem is. Discrete optimization means that there is a finite set of possible solutions, instead of a continuous range of solutions.
 
 \section{Genetic Algorithm}
 The genetic algorithm is a meta-heuristic algorithm inspired by the idea of "survival of the fittest". The basic idea is to create a "generation" of sample solutions, by encoding the data of solutions as "chromosomes". New generations of sample solutions are then created by combining these candidate solutions, with the more "fit" samples being more likely to be chosen for "reproduction". The idea is that attributes that result in good fitness will remain, while attributes resulting in bad fitness will be sorted out. Furthermore, each sample has a chance to randomly mutate, which reflects the random mutations happening in nature as well.
@@ -57,7 +57,7 @@ In our example, the information of each candidate solution is the sequence in wh
 A E B C.
 
 \subsection{Creation of new generation}
-The creation of a new generation of sample solutions consists of several steps. Two sample solutions are from the current generation is selected for \textit{mating} and then a sample in the new generation is created using \text{crossover} and \textit{mutation}.
+The creation of a new generation of sample solutions consists of several steps. Two sample solutions from the current generation is selected for \textit{mating} and then two samples in the new generation are created using \text{crossover} and \textit{mutation}.
 
 \subsubsection{Selection of samples for mating}
 When creating a new sample solution, two sample solutions in the current generation is picked. When picking sample solutions for mating, the chance of a sample being picked depends on its fitness, with more fit solutions having a larger chance of being picked. Furthermore, it is important that the two picked solutions are not the same, as this would not result in a new sample solution, when doing crossover.
@@ -95,7 +95,7 @@ where "first" means lowest index in vector. The algorithm is repeated, where sol
 \subsubsection{Mutation}
 After generating new sample solutions from crossover, there is a chance that each sample solution will mutate, e.g. create a random change to the solution . This chance is decided by a variable mutation rate. In the case of the binary representation of information, mutation could be implemented as a chance for each bit to flip.
 
-In our case, mutation is implemented as a chance to flip the position of two elements of the vector in the sample solution. 
+In our case, mutation is implemented as a chance to swap the position of two elements of the vector in the sample solution. 
 
 For example:
 \begin{figure}[h]
@@ -114,4 +114,4 @@ The algorithm must contain a stopping criterion, which is the criterion that mus
 	\item Global best solution evaluates to more/less than certain value.
 \end{itemize}
 
-In our case, the stopping criterion will be a certain number of generations without improvement in global best solution.
+In our case, the stopping criterion will be a certain number of generations without improvement in global best solution. This number has been chosen to be 19, due to implementation details.
