@@ -4,15 +4,11 @@
 The following chapter will describe the groups methodology and show multiple diagrams that show the behaviour of the system. These diagrams will be the following.
 
 \begin{itemize}
-	\item\textbf{Block Definition Diagram(BDD):} To provide an overview of the hardware structure.
-	
 	\item \textbf{State Diagram:} To provide an overview of the different states and the transition between states.
 	
 	\item \textbf{Class Diagram:} To describe the logical partitions of the implemented software, and their dependencies and associations.
 	
 	\item \textbf{Activity Diagram:} To provide an overview of the overall system flow.
-	
-	\item \textbf{Accept test:} To provide an overview of the validation of the system.
 \end{itemize}
 
 There will be three different phases throughout the development of the ROGSAnne system. Inspiration for this methodology comes from this paper \cite{A_HW_SW_CodesignMethodology} The first will be \textbf{System Analysis}. The goal of this phase is to make it clear what is to be made. It covers analysis of the system domain including interaction with the environment and required functionality.
@@ -23,4 +19,3 @@ To further analyse the system domain a class diagram should be made based on the
 The next phase will be the \textbf{System Design} phase. The goal of this phase will focus on how to make the architecture for the system, by developing BDD and state diagrams of the system. When these diagrams have been made an activity diagram will be made to illustrate the flow of control of the system.
 
 The last phase is \textbf{System implementation and validation}. The goal of this phase is to focus on making and verifying the system. This is done by making a full software solution of the problem and then find bottlenecks by measuring the timing of different computational heavy tasks. By identifying these bottlenecks it becomes apparent what to hardware accelerate. 
-An accept test should be made when validating the system to see if it satisfies the requirements.

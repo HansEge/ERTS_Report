@@ -19,9 +19,7 @@ Even though the the group successfully synthesized and exported an IP core it wa
 	\label{fig:timing_pie_hw}
 \end{figure}
 
-\Cref{fig:iterations_per_second} shows the iterations pr. second, comparing the full SW-implementation with the HW-accelerated implementation, with and without loop unrolling. In the full SW-implementation, the iterations pr second were approximated to around 1900. pr. second. For the HW-accelerated implementation with loop unrolling, this number is estimated to be around 6200. Thus, HW-acceleration of the distance-calculation results in an improvement of iterations pr. second of more than 200\%, which is a substantial increase.
-
-The optimal loop unrolling factor for this implementation was found by means of trial and error, as described in \cref{sec:design_space_exploration}, and was found to be 3. \Cref{fig:resource_utilization} shows the resources used by the module. It can be seen that it is well within the tolerated limits of the available resources, though it does use a substantial amount of resources.
+\Cref{fig:resource_utilization} shows the resources used by the module. It can be seen that it is well within the tolerated limits of the available resources, though it does use a substantial amount of resources.
 
 \begin{figure}[H]
 	\centering
