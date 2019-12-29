@@ -20,6 +20,10 @@ Figure \ref{fig:STM_diagram} shows the state machine diagram for system. It can 
 	\label{fig:STM_diagram}
 \end{figure}
 
+\subsection{Double buffering}
+The implemented algorithm operates with two buffers, one for the new generation and one for the old generation. This means when a new generation is generated the memory is allocated for the new generation beforehand. The memory for the new generation could also have been allocated dynamically which would require less memory. But, by allocating the memory beforehand makes it possible to parallelize the process of generating a new generation in the future.\\   
+State pattern is the only software design pattern used in this system. 
+
 To get an overview of the the entire system an activity diagram has been made. This diagram illustrates how the control of the system flows and has a lot in common with the state diagram which is why a lot of the states carries over to this diagram. The activity diagram can be seen on \cref{fig:Activity_diagram}.
 
 \begin{figure}[H]
