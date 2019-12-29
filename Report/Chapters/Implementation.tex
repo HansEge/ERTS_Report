@@ -89,6 +89,11 @@ Line 32 shows a "directive" used in the synthesis of the module in order to impr
 \captionsetup[lstlisting]{font={small,tt}}
 \lstinputlisting[language=c++, caption = source code for Distance Calculator test bench., label = list:DistCalcTBCPP]{../Bilag/CodeCopy/tb_DistCalc.cpp}
 
-
-
 \subsection{Design space exploration}
+During implementation of the module, it was found that using the "unroll"-directive during synthesis to unroll the for-loop in the module thread increased performance in terms of latency/calculation time. Initially, the directive was applied with no unroll factor. This increased in a very high performance, but with an estimated clock higher than the target clock (8.35 vs. 8.00), which is not a viable design. Thus, the directive was tried with different unroll factors. The module was synthesized using different unroll factors, and the estimated clock and latency was noted. The results can be seen in \cref{fig:design_space_diagram}. It is seen that while a full unroll results in the best latency, the resulting estimated clock is above the max tolerated clock. The lowest latency that also results in a tolerated clock is obtained, when using an unroll factor of 3, which is why this is chosen in the final implementation of the module.
+\begin{figure}[H]
+	\centering
+	{\includegraphics[width=\textwidth/2]{Images/paerto_latency_clock.PNG}}\\[0.5cm]
+	\caption{Design space diagram, comparing estimated clock and latency.}
+	\label{fig:design_space_diagram}
+\end{figure}
