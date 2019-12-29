@@ -47,13 +47,20 @@ Its clear that the calculation of distances is the most time consuming functiona
 
 
 \section{Test of system}
-10 predetermined coordinates has been hardcoded into the program. The setup class makes an initial population each with these 10 coordinates in a random order. The population is evaluated and a new population is made based on the best performing of the population. Whenever a new better solution(population) is found, this is saved as the best so far. If no better solution is found after 19 iteration, the program stops and the best solution has been found. An example of this can be seen below on \cref{fig:algo_test_sw}.
+10 predetermined coordinates has been hardcoded into the program. The setup class makes an initial population each with these 10 coordinates in a random order. The population is evaluated and a new population is made based on the best performing of the population. Whenever a new better solution(population) is found, this is saved as the best so far. If no better solution is found after 19 iteration, the program stops and the best solution has been found. An example of this can be seen below on \cref{fig:algo_test_sw_bar} and \cref{fig:algo_test_sw_pie}.
 
 \begin{figure}[H]
 	\centering
 	{\includegraphics[width=\textwidth/2]{Images/algo_test_sw.png}}\\[0.5cm]
-	\caption{Test of genetic algorithm}
-	\label{fig:algo_test_sw}
+	\caption{Clock cycle distribution for algorithm implemented in SW.}
+	\label{fig:algo_test_sw_bar}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	{\includegraphics[width=\textwidth/2]{Images/timing_pieChart.png}}\\[0.5cm]
+	\caption{Clock cycle distribution for algorithm implemented in SW.}
+	\label{fig:algo_test_sw_pie}
 \end{figure}
 
 \section{SystemC}
