@@ -29,6 +29,15 @@ The problem is that the number of possible solutions increases with the number o
 \end{equation}
 
 \label{eq:number_of_possible_solutions}
+
+\begin{figure}[H]
+	\centering
+	{\includegraphics[scale=0.5]{Images/number_of_possible_solutions.PNG}}\\[0.5cm]
+	\caption{Number of possible solutions}
+	\label{fig:number_of_possible_solutions}
+\end{figure}
+
+
 As the number of possible solutions is equal to the factorial of the number of points, this number quickly increases with an increasing number of points. Thus, optimizing the route by means of brute force (i.e. trying out every single solution) quickly becomes very computationally heavy. In order to avoid optimizing by brute force, global optimization functions can be used in order to find the optimal solution. We have chosen to use the genetic algorithm, as it is easy to implement when doing discrete optimization, which this problem is. Discrete optimization means that there is a finite set of possible solutions, instead of a continuous range of solutions.
 
 \section{Genetic Algorithm}

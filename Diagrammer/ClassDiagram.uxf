@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>6</zoom_level>
+  <zoom_level>7</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>480</x>
-      <y>648</y>
-      <w>216</w>
-      <h>72</h>
+      <x>462</x>
+      <y>847</y>
+      <w>252</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Class&gt;&gt;
 Population
@@ -22,10 +22,10 @@ Population
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>54</x>
-      <y>462</y>
-      <w>174</w>
-      <h>96</h>
+      <x>0</x>
+      <y>623</y>
+      <w>203</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Class&gt;&gt;
 GenerationReady
@@ -43,10 +43,10 @@ GenerationReady
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1062</x>
-      <y>426</y>
-      <w>216</w>
-      <h>138</h>
+      <x>1113</x>
+      <y>588</y>
+      <w>252</w>
+      <h>161</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Class&gt;&gt;
 Evaluator
@@ -68,10 +68,10 @@ Evaluator
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>738</x>
-      <y>426</y>
-      <w>282</w>
-      <h>144</h>
+      <x>763</x>
+      <y>588</y>
+      <w>329</w>
+      <h>168</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Class&gt;&gt;
 GenerationMaker
@@ -95,10 +95,10 @@ GenerationMaker
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>276</x>
-      <y>456</y>
-      <w>150</w>
-      <h>96</h>
+      <x>224</x>
+      <y>623</y>
+      <w>175</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Class&gt;&gt;
 Setup
@@ -114,10 +114,10 @@ Setup
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>342</x>
-      <y>546</y>
-      <w>18</w>
-      <h>72</h>
+      <x>301</x>
+      <y>728</y>
+      <w>21</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
@@ -125,32 +125,32 @@ Setup
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>126</x>
-      <y>552</y>
-      <w>474</w>
-      <h>108</h>
+      <x>84</x>
+      <y>728</y>
+      <w>518</w>
+      <h>133</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>770.0;160.0;770.0;90.0;10.0;90.0;10.0;10.0</additional_attributes>
+    <additional_attributes>720.0;170.0;720.0;100.0;10.0;100.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>798</x>
-      <y>558</y>
-      <w>384</w>
-      <h>60</h>
+      <x>833</x>
+      <y>742</y>
+      <w>420</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
-    <additional_attributes>10.0;80.0;620.0;80.0;620.0;10.0</additional_attributes>
+    <additional_attributes>10.0;80.0;580.0;80.0;580.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>582</x>
-      <y>564</y>
-      <w>300</w>
-      <h>54</h>
+      <x>581</x>
+      <y>749</y>
+      <w>350</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>10.0;70.0;480.0;70.0;480.0;10.0</additional_attributes>
@@ -158,10 +158,10 @@ Setup
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1320</x>
-      <y>444</y>
-      <w>216</w>
-      <h>96</h>
+      <x>1407</x>
+      <y>609</y>
+      <w>140</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Class&gt;&gt;
 UserInterface
@@ -174,33 +174,32 @@ UserInterface
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1272</x>
-      <y>486</y>
-      <w>60</w>
-      <h>18</h>
+      <x>1358</x>
+      <y>658</y>
+      <w>63</w>
+      <h>21</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>456</x>
-      <y>30</y>
-      <w>276</w>
-      <h>150</h>
+      <x>434</x>
+      <y>126</y>
+      <w>322</w>
+      <h>161</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Class&gt;&gt;
 SystemContext
 -
-+ BaseState* curState
 + Population PopA
 + Population PopB
-+ BaseState* setup
-+ BaseState* objectiveFunc
-+ BaseState* fitness
-+ BaseState* BabyMaker
-+ BaseState* Evaluator
++ BaseState* curState
++ BaseState* setupState
++ BaseState* generationReadyState
++ BaseState* GenerationMakerState
++ BaseState* EvaluatorState
 -
 + SetState(BaseState*) : void
 + initializeCoordinates(): void
@@ -212,10 +211,10 @@ SystemContext
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>348</x>
-      <y>330</y>
-      <w>252</w>
-      <h>138</h>
+      <x>308</x>
+      <y>476</y>
+      <w>294</w>
+      <h>161</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
     <additional_attributes>400.0;10.0;400.0;90.0;10.0;90.0;10.0;210.0</additional_attributes>
@@ -223,21 +222,21 @@ SystemContext
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>582</x>
-      <y>378</y>
-      <w>600</w>
-      <h>60</h>
+      <x>581</x>
+      <y>532</y>
+      <w>672</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>10.0;10.0;980.0;10.0;980.0;80.0</additional_attributes>
+    <additional_attributes>10.0;10.0;940.0;10.0;940.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>870</x>
-      <y>378</y>
-      <w>18</w>
-      <h>60</h>
+      <x>917</x>
+      <y>532</y>
+      <w>21</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
@@ -245,24 +244,24 @@ SystemContext
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>126</x>
-      <y>378</y>
-      <w>240</w>
-      <h>96</h>
+      <x>84</x>
+      <y>532</y>
+      <w>245</w>
+      <h>105</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>380.0;10.0;10.0;10.0;10.0;140.0</additional_attributes>
+    <additional_attributes>330.0;10.0;10.0;10.0;10.0;130.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>474</x>
-      <y>210</y>
-      <w>234</w>
-      <h>126</h>
+      <x>455</x>
+      <y>336</y>
+      <w>273</w>
+      <h>147</h>
     </coordinates>
     <panel_attributes>/&lt;&lt;AbstractClass&gt;&gt;/
-StateBase
+BaseState
 -
 + SystemContext* pSysContext 
 -
@@ -283,21 +282,21 @@ StateBase
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>582</x>
-      <y>174</y>
-      <w>18</w>
-      <h>48</h>
+      <x>581</x>
+      <y>280</y>
+      <w>21</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>456</x>
-      <y>456</y>
-      <w>252</w>
-      <h>96</h>
+      <x>434</x>
+      <y>623</y>
+      <w>294</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Class&gt;&gt;
 RNG
@@ -314,10 +313,10 @@ RNG
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>702</x>
-      <y>498</y>
-      <w>48</w>
-      <h>18</h>
+      <x>721</x>
+      <y>672</y>
+      <w>56</w>
+      <h>21</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;60.0;10.0</additional_attributes>
@@ -325,10 +324,10 @@ RNG
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>420</x>
-      <y>498</y>
-      <w>48</w>
-      <h>18</h>
+      <x>392</x>
+      <y>672</y>
+      <w>56</w>
+      <h>21</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
