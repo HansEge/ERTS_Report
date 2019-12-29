@@ -3,7 +3,7 @@
 \chapter{Design}
 \section{Design Patterns}
 \subsection{State Machine Pattern}
-The state machine pattern has been used to develop the system. This is partly in order to structure the general flow of the algorithm, and partly in order to support concurrent development of the algorithm, as different parts of the algorithm can be implemented simultaneously as different states.
+The state machine pattern has been used to develop the system. This is partly done in order to structure the general flow of the algorithm, and partly in order to support concurrent development of the algorithm, as different parts of the algorithm can be implemented simultaneously as different states.
 
 Figure \ref{fig:STM_diagram} shows the state machine diagram for system. It can be seen that the general flow of the system is as follows:
 \begin{enumerate}
@@ -19,6 +19,17 @@ Figure \ref{fig:STM_diagram} shows the state machine diagram for system. It can 
 	\caption{State machine diagram for the developed system.}
 	\label{fig:STM_diagram}
 \end{figure}
+
+To get an overview of the the entire system an activity diagram has been made. This diagram illustrates how the control of the system flows and has a lot in common with the state diagram which is why a lot of the states carries over to this diagram. The activity diagram can be seen on \cref{fig:Activity_diagram}.
+
+\begin{figure}[H]
+	\centering
+	{\includegraphics[width=\textwidth]{Images/AD_ROGSAnne.PNG}}\\[0.5cm]
+	\caption{State machine diagram for the developed system.}
+	\label{fig:Activity_diagram}
+\end{figure}
+
+
 
 \subsection{Command Pattern}
 The command pattern will be utilized in the creation of new generations. This is done to add the possibility of parallellizing the process of creating samples in the new generation. By creating a command queue and letting different instances of the class that creates samples \textit{(creators)} execute the commands, it is possible to "order" the creation of a certain amount of new samples, and then let the execution be up to the scheduler. This way, design space exploration can be carried out, with evaluation of execution speed versus resources used.
