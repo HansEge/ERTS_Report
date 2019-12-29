@@ -50,6 +50,8 @@ Its clear that the calculation of distances is the most time consuming functiona
 \section{Test of system}
 10 predetermined coordinates has been hardcoded into the program. The setup class makes an initial population each with these 10 coordinates in a random order. The population is evaluated and a new population is made based on the best performing of the population. Whenever a new better solution(population) is found, this is saved as the best so far. If no better solution is found after 19 iteration, the program stops and the best solution has been found. An example of this can be seen below on \cref{fig:algo_test_sw_bar} and \cref{fig:algo_test_sw_pie}.
 
+The stop condition of 19 iteration was chosen because a memory error that caused the system to crash after 63 iteration. After extensive debugging the fault was located and determined to be a pointer that for some unknown reason changes its value to 0 after 62 iterations and the program would then crash. The stop condition has to be kept low to ensure that the iterations are kept under 63.
+
 \begin{figure}[H]
 	\centering
 	{\includegraphics[width=\textwidth/2]{Images/algo_test_sw.png}}\\[0.5cm]
@@ -98,6 +100,7 @@ Line 32 shows a "directive" used in the synthesis of the module in order to impr
 \lstinputlisting[language=c++, caption = source code for Distance Calculator test bench., label = list:DistCalcTBCPP]{../Bilag/CodeCopy/tb_DistCalc.cpp}
 
 \subsection{Design space exploration}
+\label{sec:design_space_exploration}
 During implementation of the module, it was found that using the "unroll"-directive during synthesis to unroll the for-loop in the module thread increased performance in terms of latency/calculation time. Initially, the directive was applied with no unroll factor. This increased in a very high performance, but with an estimated clock higher than the target clock (8.35 vs. 8.00), which is not a viable design. Thus, the directive was tried with different unroll factors. The module was synthesized using different unroll factors, and the estimated clock and latency was noted. The results can be seen in \cref{fig:design_space_diagram}. It is seen that while a full unroll results in the best latency, the resulting estimated clock is above the max tolerated clock. The lowest latency that also results in a tolerated clock is obtained, when using an unroll factor of 3, which is why this is chosen in the final implementation of the module.
 \begin{figure}[H]
 	\centering

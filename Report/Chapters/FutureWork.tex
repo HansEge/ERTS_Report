@@ -1,4 +1,11 @@
 %!TEX root = ../Main.tex
 
 \chapter{Future Work}
-For future work it would make sense to look at the next bottleneck in the system. The first bottleneck in the system were as mentioned the calculation of distances between the locations. The next most computation heavy functionality was the creation of a new generation. So, the next step would be to examine the use of the “unroll”-directive to unroll the generate a new generation for-loop to increase the performance in terms of calculation time. 
+While the results of this project have already improved upon the original system, there is still room for improvement. The following points could be topics for improvement in a future implementation-
+
+\begin{description}
+	\item [Fix "pointer"-error] - Obviously, the source of this error should be identified and corrected, as the value of the entire system is compromised heavily by this error.
+	\item [Implementation using synthesized module] - It would be relevant to see the synthesized module in an actual implementation, to see whether the performance improvement is as good as hypothesized.
+	\item [HW-acceleration of creation of new generation] - Seeing as it was estimated that 91\% of the clock cycles (after HW-acceleration of distance-calculation) are spent on creating new generations, the next natural step would be to HW-accelerate this task as well, as this would most likely result in yet another large increase in execution time.
+	\item [Parallelization] - Another possible method that could be used to increase performance would be to parrallelize the calculation of distances, and the creation of new candidate solutions. Seeing as memory for the two populations is allocated at compile-time, and that the populations are implemented using the "double-buffering"-method, there would be little need for resource-locking, which is likely to make the parallelization very efficient.
+\end{description}
