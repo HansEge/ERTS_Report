@@ -49,6 +49,8 @@ Its clear that the calculation of distances is the most time consuming functiona
 \section{Test of system}
 10 predetermined coordinates has been hardcoded into the program. The setup class makes an initial population each with these 10 coordinates in a random order. The population is evaluated and a new population is made based on the best performing of the population. Whenever a new better solution(population) is found, this is saved as the best so far. If no better solution is found after 19 iteration, the program stops and the best solution has been found. An example of this can be seen below on \cref{fig:algo_test_sw_bar} and \cref{fig:algo_test_sw_pie}.
 
+The stop condition of 19 iteration was chosen because a memory error that caused the system to crash after 63 iteration. After extensive debugging the fault was located and determined to be a pointer that for some unknown reason changes its value to 0 after 62 iterations and the program would then crash. The stop condition has to be kept low to ensure that the iterations are kept under 63.
+
 \begin{figure}[H]
 	\centering
 	{\includegraphics[width=\textwidth/2]{Images/algo_test_sw.png}}\\[0.5cm]
