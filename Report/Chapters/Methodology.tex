@@ -6,7 +6,7 @@ The following chapter will describe the groups methodology and show multiple dia
 \begin{itemize}
 	\item\textbf{Block Definition Diagram(BDD):} To provide an overview of the hardware structure.
 	
-	\item \textbf{Internal Block Diagram (IBD):} To provide an overview of the connection between IP-blocks.
+	\item \textbf{State Diagram:} To provide an overview of the different states and the transition between states.
 	
 	\item \textbf{Class Diagram:} To describe the logical partitions of the implemented software, and their dependencies and associations.
 	
@@ -20,8 +20,7 @@ There will be three different phases throughout the development of the ROGSAnne 
 The first step of System Analysis is to identify external users interacting with the system. This is done with use cases. These external actors could be sensors, actuators or users. The second step would be to identify use cases for these external actors and describe the use case scenario. 
 To further analyse the system domain a class diagram should be made based on the findings in the use cases.
 
-The next phase will be the \textbf{System Design} phase. The goal of this phase will focus on how to make the architecture for the system, by developing BDD and IBDs of the system. When these diagrams have been made an activity diagram will be made to illustrate the flow of control of the system.
+The next phase will be the \textbf{System Design} phase. The goal of this phase will focus on how to make the architecture for the system, by developing BDD and state diagrams of the system. When these diagrams have been made an activity diagram will be made to illustrate the flow of control of the system.
 
-The last phase is \textbf{System implementation and validation}. The goal of this phase is to focus on making and verifying the system. Because this phase only focuses on the implementation and validation of the system, there's no need for more diagrams. An accept test could be made when validating the system to see if it satisfies the requirements and a table is  most likely the best way to showcase these results.
-
-
+The last phase is \textbf{System implementation and validation}. The goal of this phase is to focus on making and verifying the system. This is done by making a full software solution of the problem and then find bottlenecks by measuring the timing of different computational heavy tasks. By identifying these bottlenecks it becomes apparent what to hardware accelerate. 
+An accept test should be made when validating the system to see if it satisfies the requirements.
